@@ -1,0 +1,9 @@
+{
+    "name": "zepto.webpack",
+    "version": "0.0.1",
+    "description": "A minimalist JavaScript library optimized for use with Webpack",
+    "main": "zepto.js",
+    "repository": "https://github.com/way5/zepto.webpack",
+    "author": "Sergey Ko",
+    "license": "MIT"
+}
