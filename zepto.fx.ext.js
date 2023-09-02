@@ -117,29 +117,6 @@
             }
         }
 
-        $.fn.fadeIn = function (duration) {
-            if (duration === undefined) duration = 500;
-            $(this)
-                .css({
-                    display: "block",
-                    opacity: 0,
-                })
-                .animate({ opacity: 1 }, duration);
-            return this;
-        };
-
-        $.fn.fadeOut = function (duration) {
-            if (duration === undefined) duration = 500;
-            $(this)
-                .css({
-                    opacity: 1,
-                })
-                .animate({ opacity: 0 }, duration, "linear", function () {
-                    $(this).css("display", "none");
-                });
-            return this;
-        };
-
         wrappedCallback = function (event) {
             if (typeof event !== "undefined") {
                 if (event.target !== event.currentTarget) return; // makes sure the event didn't bubble from "below"
@@ -172,6 +149,29 @@
                 });
             }, 0);
 
+        return this;
+    };
+
+    $.fn.fadeIn = function (duration) {
+        if (duration === undefined) duration = 500;
+        $(this)
+            .css({
+                display: "block",
+                opacity: 0,
+            })
+            .animate({ opacity: 1 }, duration);
+        return this;
+    };
+
+    $.fn.fadeOut = function (duration) {
+        if (duration === undefined) duration = 500;
+        $(this)
+            .css({
+                opacity: 1,
+            })
+            .animate({ opacity: 0 }, duration, "linear", function () {
+                $(this).css("display", "none");
+            });
         return this;
     };
 
