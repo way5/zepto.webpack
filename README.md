@@ -13,4 +13,8 @@ yarn add way5/zepto.webpack
 
 ```javascript
 import $ from 'zepto.webpack'
+
+// optional
+
+import 'zepto.webpack/zepto.fx.ext'
 ```
